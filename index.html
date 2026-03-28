@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>rebel evolve — the direction was already there</title>
+  <meta name="description" content="Mentorship for professionals, founders, and leaders. From friction to initiative. The direction was always already there." />
+  <meta property="og:title" content="rebel evolve — mentorship" />
+  <meta property="og:description" content="Deep listening. Reflection. From friction to initiative. The direction was always already there." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rebelevolve.com" />
+  <meta property="og:image" content="https://rebelevolve.com/rebelevolve_banner_sm.jpeg" />
+  <link rel="icon" href="/rebelevolve_favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:        #ebe7dc;
+      --paper:      #0c1516;
+      --card:       #0e171a;
+      --card-lt:    #131f23;
+      --gold:       #ecb02f;
+
+      /* ── spectrum variables ── */
+      --node-0:     #0c1516;
+      --node-1:     #6b2d1a;
+      --node-2:     #9d4418;
+      --node-3:     #c49a3c;
+      --node-4:     #7a9e2a;
+      --node-5:     #2d6a1f;
+      --node-6:     #0f6e56;
+      --node-7:     #1a6b9e;
+      --node-8:     #3c3489;
+      --node-9:     #2d1a4e;
+
+      --accent:     #2d6a1f;  /* direction · second cube · canopy green */
+      --accent-lt:  #3d8a2a;
+
+      --muted:      #cbc6ba;
+      --line:       rgba(240,237,230,.1);
+      --r:          8px;
+      --serif:      'Exo 2', system-ui, sans-serif;
+      --sans:       'DM Sans', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --ink:        #f4f2ec;
+      --paper:      #010003;
+      --card:       #151515;
+      --card-lt:    #20211e;
+      --gold:       #e6c47d;
+      --accent:     #4a9e35;
+      --accent-lt:  #5cb840;
+      --muted:      #b5ad9e;
+      --line:       rgba(240,237,230,.1);
+    }
+
+    [data-theme="dark"] .nav         { background: #010003; }
+    [data-theme="dark"] .card        { background: #151515; }
+    [data-theme="dark"] .offer-card  { background: #151515; }
+    [data-theme="dark"] .cta-card    { background: #151515; }
+
+    [data-theme="light"] {
+      --ink:        #1a1814;
+      --paper:      #f4f2ec;
+      --card:       #fffff2;
+      --card-lt:    #e8e2d6;
+      --muted:      #5a554e;
+      --gold:       #8B5E2A;
+      --accent:     #2d6a1f;
+      --accent-lt:  #3d8a2a;
+      --line:       rgba(26,24,20,.12);
+    }
+
+    [data-theme="light"] .nav        { background: #f4f2ec; }
+    [data-theme="light"] .card       { background: #fffff2; }
+    [data-theme="light"] .offer-card { background: #fffff2; }
+    [data-theme="light"] .cta-card   { background: #fffff2; }
+    [data-theme="light"] .brand      { color: #1a1814; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* ─── nav ─── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .9rem 2rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .navlinks { display: flex; align-items: center; gap: 1.6rem; }
+
+    .navlinks a {
+      font-size: .85rem;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: .02em;
+      transition: color .2s;
+    }
+
+    .navlinks a:hover { color: var(--accent); }
+
+    .navlinks .pill {
+      background: var(--accent);
+      color: #ffffff;
+      padding: .42rem 1rem;
+      border-radius: 100px;
+      font-weight: 500;
+      transition: background .2s;
+    }
+
+    .navlinks .pill:hover {
+      background: var(--accent-lt);
+      outline: 1.5px solid var(--gold);
+      outline-offset: 1px;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1.5px solid var(--line);
+      border-radius: 100px;
+      cursor: pointer;
+      padding: .35rem .6rem;
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--muted);
+      transition: border-color .2s, color .2s;
+    }
+
+    .theme-toggle:hover { border-color: var(--gold); color: var(--ink); }
+
+    /* ─── page ─── */
+    .page { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+
+    /* ─── hero ─── */
+    .hero {
+      padding: 7rem 0 5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: .88rem;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+      letter-spacing: .06em;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      font-weight: 700;
+      color: var(--ink);
+      max-width: 700px;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 580px;
+      line-height: 1.75;
+      margin-bottom: 1.4rem;
+      font-weight: 300;
+    }
+
+    .subhead strong { color: var(--ink); font-weight: 500; }
+
+    .hero-note {
+      font-size: .82rem;
+      color: var(--muted);
+      letter-spacing: .03em;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
+    .ctaRow { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+    /* ─── buttons ─── */
+    .btn {
+      display: inline-flex; align-items: center;
+      padding: .65rem 1.4rem;
+      border-radius: var(--r);
+      font-family: var(--sans);
+      font-size: .88rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .2s;
+      border: 1.5px solid transparent;
+    }
+
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent-lt); border-color: var(--accent-lt); }
+    .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── sections ─── */
+    section { margin-top: 5rem; }
+
+    .section-label {
+      font-family: var(--serif);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.6rem;
+    }
+
+    /* ─── cards ─── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 2.2rem 2.4rem;
+    }
+
+    .card h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: .97rem;
+      margin-bottom: .8rem;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ─── field note ─── */
+    .field-note {
+      background: var(--card);
+      border: 1px solid var(--accent);
+      border-radius: var(--r);
+      padding: 2.4rem 2.8rem;
+      text-align: center;
+    }
+
+    .field-note p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.9;
+      letter-spacing: .01em;
+    }
+
+    .field-note p em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 300;
+    }
+
+    /* ─── offer cards ─── */
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 560px) { .offer-grid { grid-template-columns: 1fr; } }
+
+    .offer-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 1.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      opacity: .5;
+      transition: opacity .25s;
+    }
+
+    .offer-card:hover { border-color: var(--accent); }
+    .offer-card:hover::before { opacity: 1; }
+
+    .offer-card .format {
+      font-family: var(--serif);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .offer-card h3 {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+
+    .offer-card p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    /* ─── cta ─── */
+    .cta-card {
+      background: var(--card);
+      border: 1px solid var(--accent);
+      border-radius: var(--r);
+      padding: 2.2rem 2.4rem;
+    }
+
+    .cta-card h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      margin-bottom: .8rem;
+      color: var(--ink);
+    }
+
+    .cta-card p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: .97rem;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ─── footer ─── */
+    .footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: .6rem;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .footer a { color: var(--gold); text-decoration: none; }
+    .footer a:hover { opacity: .75; }
+
+    .muted { color: var(--muted); }
+
+    /* ─── animations ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero .kicker    { animation: fadeUp .5s ease both; animation-delay: .05s; }
+    .hero h1         { animation: fadeUp .5s ease both; animation-delay: .12s; }
+    .hero .subhead   { animation: fadeUp .5s ease both; animation-delay: .2s; }
+    .hero .ctaRow    { animation: fadeUp .5s ease both; animation-delay: .28s; }
+    .hero .hero-note { animation: fadeUp .5s ease both; animation-delay: .34s; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/">rebel <span>evolve</span></a>
+    <nav class="navlinks">
+      <a href="#about">about</a>
+      <a href="#what">what happens</a>
+      <a href="#offers">offers</a>
+      <a href="#enquire" class="pill">enquire</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <!-- ─── hero ─── -->
+    <section class="hero">
+      <p class="kicker">rebel evolve · mentorship for professionals, founders, and leaders · from friction to initiative</p>
+      <h1>The direction was always <em>already there.</em></h1>
+      <p class="subhead">
+        Deep listening. Reflection of the stated need
+        and the needs underneath. <strong>The witness who sees
+        what you cannot yet see from inside your own field.</strong>
+      </p>
+      <p class="subhead">
+        You move from friction to initiative. You feel more deeply understood —
+        and understand yourself better. On a multiscalar level:
+        the individual, the team, and the collective.
+      </p>
+      <div class="ctaRow">
+        <a class="btn primary" href="#enquire">enquire</a>
+        <a class="btn ghost" href="#what">what happens</a>
+      </div>
+      <p class="hero-note">limited availability · the direction finds itself</p>
+    </section>
+
+    <!-- ─── field note ─── -->
+    <section>
+      <div class="field-note">
+        <p>You already know the direction.</p>
+        <p><em>You just haven't had the witness yet.</em></p>
+        <p>That's what this is.</p>
+      </div>
+    </section>
+
+    <!-- ─── about ─── -->
+    <section id="about">
+      <p class="section-label">the mentor</p>
+      <div class="card">
+        <h2>Deiadora listens at a level most rooms never reach.</h2>
+        <p>
+          As a natural technologist, researcher, writer, and musician who has spent
+          thirteen years studying the architecture of coherent human systems,
+          Deiadora brings an unusual depth of perception to mentorship.
+          She hears not just what is said but what is underneath it —
+          the pattern beneath the presenting problem,
+          the direction beneath the friction.
+        </p>
+        <p>
+          Her work is grounded in <em>Quantum Currency: Field Research on Human Coherence</em>
+          and the multiscalar framework she has been teaching to professionals,
+          founders, and teams across the tech industry and beyond.
+          She often works with Human Design and Gene Keys charts
+          as a tool for self-knowledge — mapping the individual's
+          unique architecture at the personal, relational, and collective level.
+        </p>
+        <p>
+          This is not life coaching. It is something more precise:
+          a space in which the professional, founder, or leader
+          who already knows something is off can finally name it —
+          and find the direction their own internal coherence
+          always already preferred.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── what happens ─── -->
+    <section id="what">
+      <p class="section-label">what happens in a session</p>
+      <div class="card">
+        <h2>You are witnessed. The direction becomes legible.</h2>
+        <p>
+          A session begins with deep listening — to the stated need
+          and to the needs underneath it. Deiadora reflects back
+          what she hears, including what isn't being said.
+          This is not advice-giving. It is a mirror held steadily
+          until the pattern becomes visible to the person looking into it.
+        </p>
+        <p>
+          The framework that runs through every session is multiscalar:
+          individual, team, collective. Where are you in relation
+          to yourself? Where is the team in relation to its own coherence?
+          Where is the collective — the organisation, the community,
+          the field — in relation to what it's trying to build?
+          The three scales illuminate each other. What looks like
+          a personal friction often turns out to be a collective pattern.
+          What looks like a team problem often resolves at the individual level.
+        </p>
+        <p>
+          By the end of a session, you have moved. Not because something
+          was fixed — but because something was seen. The direction
+          was always already there. The session is how it becomes legible.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── offers ─── -->
+    <section id="offers">
+      <p class="section-label">how we work together</p>
+      <div class="offer-grid">
+
+        <div class="offer-card">
+          <p class="format">1:1 · individual</p>
+          <h3>One-to-one mentorship</h3>
+          <p>For professionals, founders, and leaders navigating an inflection point — in their work, their team, or their own direction. Deep listening, fractal framework, Human Design and Gene Keys as the map of your individual architecture.</p>
+        </div>
+
+        <div class="offer-card">
+          <p class="format">small group · team</p>
+          <h3>Small group mentorship</h3>
+          <p>For leadership teams or small groups working through a collective challenge. The multiscalar framework applied to the team as a system — what the group is actually doing versus what it thinks it's doing.</p>
+        </div>
+
+        <div class="offer-card">
+          <p class="format">individual layer</p>
+          <h3>Human Design + Gene Keys</h3>
+          <p>Your chart as the starting point — the individual layer of the multiscalar framework. Not esoteric: a precise map of how your system processes energy, makes decisions, and finds its direction. Get to know yourself on a level most people never access.</p>
+        </div>
+
+        <div class="offer-card">
+          <p class="format">ongoing · series</p>
+          <h3>Ongoing engagement</h3>
+          <p>For those who want to work with the full framework over time — as the direction becomes clearer, the team evolves, and the collective pattern shifts. The most coherent work happens in container, not in a single session.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── enquire ─── -->
+    <section id="enquire">
+      <div class="cta-card">
+        <h2>Enquire about mentorship</h2>
+        <p>
+          For 1:1, small group, or ongoing engagement enquiries —
+          email directly. Every engagement begins with a conversation
+          to establish whether the work is the right fit.
+          Limited availability. The direction finds itself.
+        </p>
+        <a class="btn primary" href="mailto:hello@rebelevolve.com?subject=mentorship enquiry · rebelevolve.com">email deiadora →</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>rebel evolve · direction · second cube</p>
+      <p class="muted">© <span id="year"></span> · part of the <a href="https://deiadora.com">deiadora ecosystem</a> 🌿</p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("theme-rebelevolve") || "dark";
+    document.documentElement.setAttribute("data-theme", saved);
+    toggle.textContent = saved === "dark" ? "🌙" : "☀️";
+
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme-rebelevolve", next);
+      toggle.textContent = next === "dark" ? "🌙" : "☀️";
+    });
+  </script>
+</body>
+</html>
