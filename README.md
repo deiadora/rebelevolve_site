@@ -1,2 +1,133 @@
-# rebelevolve_site
-5 · direction · second cube. Mentorship for professionals, founders, and leaders — deep listening, reflection, and the multiscalar framework applied to the individual, the team, and the collective. From friction to initiative. The direction was always already there.
+# rebel evolve · direction · second cube
+ 
+> *The direction was always already there.*
+ 
+**direction · canopy green · #2d6a1f · accent-lt #3d8a2a**
+ 
+---
+ 
+### what this is
+ 
+Mentorship for professionals, founders, and leaders — built on deep listening, the multiscalar framework of *Quantum Currency: Field Research on Human Coherence*, and thirteen years of field research into the architecture of coherent human systems.
+ 
+This is not life coaching. It is something more precise: a space in which the professional, founder, or leader who already knows something is off can finally name it — and find the direction their own internal coherence always already preferred.
+ 
+---
+ 
+### what happens in a session
+ 
+A session begins with deep listening — to the stated need and to the needs underneath it. Deiadora reflects back what she hears, including what isn't being said. This is not advice-giving. It is a mirror held steadily until the pattern becomes visible to the person looking into it.
+ 
+The framework that runs through every session is multiscalar: individual, team, collective. The three scales illuminate each other. What looks like a personal friction often turns out to be a collective pattern. What looks like a team problem often resolves at the individual level.
+ 
+By the end of a session, you have moved. Not because something was fixed — but because something was seen. The direction was always already there. The session is how it becomes legible.
+ 
+---
+ 
+### offers
+ 
+| format | description |
+|--------|-------------|
+| 1:1 · individual | For professionals, founders, and leaders at an inflection point. Deep listening, fractal framework, Human Design and Gene Keys as the map of individual architecture. |
+| Small group · team | For leadership teams or small groups working through a collective challenge — the multiscalar framework applied to the team as a system. |
+| Human Design + Gene Keys | Your chart as the starting point — the individual layer of the multiscalar framework. A precise map of how your system processes energy, makes decisions, and finds its direction. |
+| Ongoing engagement | For those who want to work with the full framework over time. The most coherent work happens in container, not in a single session. |
+ 
+---
+ 
+### booking
+ 
+For all mentorship enquiries email: hello@deiadora.com · subject: mentorship enquiry · rebelevolve.com
+ 
+Every engagement begins with a conversation to establish whether the work is the right fit. Limited availability.
+ 
+---
+ 
+### the geometry
+ 
+**Direction · second cube** — spontaneous symmetry breaking. The pencil balanced on its tip falls in the direction its internal coherence always preferred. Not pushed. Not pulled. Released into the vector it was always going to find. The second cube is the geometry of directed motion — the container become compass, the system knowing which way is forward because it has become coherent enough to feel the difference.
+ 
+Mentorship is the field condition that allows the symmetry to break cleanly. The direction doesn't come from the mentor. It emerges from the person when they are witnessed accurately enough that their own coherence becomes legible to them.
+ 
+---
+ 
+### design system
+ 
+**Accent (light + dark base):** `#2d6a1f` · canopy green · deep chlorophyll · 530nm
+**Accent (dark mode):** `#4a9e35` · lighter for readability against dark backgrounds
+**Accent-lt:** `#3d8a2a` (light) · `#5cb840` (dark)
+ 
+```css
+/* light mode */
+--accent:    #2d6a1f;
+--accent-lt: #3d8a2a;
+ 
+/* dark mode */
+--accent:    #4a9e35;
+--accent-lt: #5cb840;
+```
+ 
+**Default:** dark mode
+**localStorage key:** `theme-rebelevolve`
+ 
+---
+ 
+### hero
+ 
+```
+kicker:     rebel evolve · mentorship for professionals, founders,
+            and leaders · from friction to initiative
+h1:         The direction was always already there.
+            (em italic: "already there.")
+subhead 1:  Deep listening. Reflection of the stated need and the needs
+            underneath. The witness who sees what you cannot yet see
+            from inside your own field.
+subhead 2:  You move from friction to initiative. You feel more deeply
+            understood — and understand yourself better. On a multiscalar
+            level: the individual, the team, and the collective.
+hero note:  limited availability · the direction finds itself
+```
+ 
+---
+ 
+### field note
+ 
+```
+You already know the direction.
+You just haven't had the witness yet.
+That's what this is.
+```
+ 
+---
+ 
+### deployment
+ 
+Deployed on **Cloudflare Pages**.
+ 
+- Default theme: dark
+- Theme preference stored in `localStorage` key: `theme-rebelevolve`
+- Contact: hello@deiadora.com
+ 
+---
+ 
+### note on domain
+ 
+`deiadora.observe` was considered as an alternative domain — the observer, the witness, the one who sees. Worth revisiting as the work develops.
+ 
+---
+ 
+### part of the deiadora ecosystem
+ 
+→ [deiadora.com](https://deiadora.com) · the field
+→ [deiadorebel.life](https://deiadorebel.life) · coherence · torus
+→ [drblexchange.com](https://drblexchange.com) · recognition · vesica piscis
+→ [quantummagic.ai](https://quantummagic.ai) · discernment · tetrahedron
+→ [iamdeiadora.com](https://iamdeiadora.com) · wave · the cube
+→ [rebelevolve.com](https://rebelevolve.com) · direction · second cube
+→ [deiadorebel.com](https://deiadorebel.com) · transmission · dodecahedron
+→ [techtuition.ai](https://techtuition.ai) · expression · egg of life
+→ [thequantumceo.com](https://thequantumceo.com) · structure · octagon
+→ [deiadora.live](https://deiadora.live) · source · nonagon
+ 
+*the direction was always already there*
+ 
