@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>rebel evolve — the direction was already there</title>
-  <meta name="description" content="Mentorship for for those building the future. From friction to initiative. The direction was always already there." />
+  <meta name="description" content="Mentorship for those building the future. From friction to initiative. The direction was always already there." />
   <meta property="og:title" content="rebel evolve — mentorship" />
   <meta property="og:description" content="Deep listening. Energetic reflection in simple terms. From friction to initiative. The direction was always already there." />
   <meta property="og:type" content="website" />
@@ -81,7 +81,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; transition: background .25s, color .25s; }
 
     /* ─── nav ─── */
     .nav {
@@ -405,7 +405,7 @@
       <a href="#what">what happens</a>
       <a href="#offers">offers</a>
       <a href="#enquire" class="pill">enquire</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="toggle theme">🌙</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌙</button>
     </nav>
   </header>
 
@@ -459,8 +459,8 @@
           and the multiscalar framework she has been teaching to professionals,
           founders, and teams across the tech industry and beyond.
           She works with her 264 quantum keys — emotional arcs
-          as a tool for self-knowledge — by listening to language patterns. 
-          These then map to the individual's unique architecture 
+          as a tool for self-knowledge — by listening to language patterns.
+          These then map to the individual's unique architecture
           at the personal, relational, and collective level.
         </p>
         <p>
@@ -528,7 +528,7 @@
         <div class="offer-card">
           <p class="format">ongoing · series</p>
           <h3>Ongoing engagement</h3>
-          <p>For those who want to work with the full 264-arc framework over time. The most coherent work happens in container that allows you to explore your own emotional architecture.</p>
+          <p>For those who want to work with the full 264-arc framework over time. The most coherent work happens in a container that allows you to explore your own emotional architecture.</p>
         </div>
 
       </div>
@@ -556,17 +556,48 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    const toggle = document.getElementById("themeToggle");
-    const saved = localStorage.getItem("theme-rebelevolve") || "dark";
-    document.documentElement.setAttribute("data-theme", saved);
-    toggle.textContent = saved === "dark" ? "🌙" : "☀️";
 
+    const toggle  = document.getElementById("themeToggle");
+    const root    = document.documentElement;
+    const STORE   = "qc-theme"; // shared key across all ecosystem sites
+
+    // Detect system preference
+    const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function resolveTheme() {
+      const saved = localStorage.getItem(STORE);
+      if (saved) return saved;                     // explicit user override
+      return sysDark.matches ? "dark" : "light";   // follow system
+    }
+
+    function applyTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+      toggle.setAttribute("aria-label", theme === "dark" ? "switch to light mode" : "switch to dark mode");
+    }
+
+    // Initial paint
+    applyTheme(resolveTheme());
+
+    // Toggle click — cycle: override opposite → clear override (return to system)
     toggle.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme");
+      const current = root.getAttribute("data-theme");
+      const sysTheme = sysDark.matches ? "dark" : "light";
       const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme-rebelevolve", next);
-      toggle.textContent = next === "dark" ? "🌙" : "☀️";
+
+      if (next === sysTheme) {
+        localStorage.removeItem(STORE);
+      } else {
+        localStorage.setItem(STORE, next);
+      }
+      applyTheme(next);
+    });
+
+    // Follow OS schedule changes if no manual override is set
+    sysDark.addEventListener("change", () => {
+      if (!localStorage.getItem(STORE)) {
+        applyTheme(sysDark.matches ? "dark" : "light");
+      }
     });
   </script>
 </body>
