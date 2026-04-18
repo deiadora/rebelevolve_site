@@ -13,7 +13,7 @@
   <link rel="icon" href="/rebelevolve_favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --ink:        #ebe7dc;
@@ -22,7 +22,6 @@
       --card-lt:    #131f23;
       --gold:       #ecb02f;
 
-      /* ── spectrum variables ── */
       --node-0:     #0c1516;
       --node-1:     #6b2d1a;
       --node-2:     #9d4418;
@@ -34,7 +33,7 @@
       --node-8:     #3c3489;
       --node-9:     #2d1a4e;
 
-      --accent:     #2d6a1f;  /* direction · second cube · canopy green */
+      --accent:     #2d6a1f;
       --accent-lt:  #3d8a2a;
 
       --muted:      #cbc6ba;
@@ -42,6 +41,7 @@
       --r:          8px;
       --serif:      'Exo 2', system-ui, sans-serif;
       --sans:       'DM Sans', system-ui, sans-serif;
+      --display:    'Cormorant Garamond', Georgia, serif;
     }
 
     [data-theme="dark"] {
@@ -166,11 +166,11 @@
     }
 
     .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
-      line-height: 1.12;
-      letter-spacing: -.03em;
-      font-weight: 700;
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      font-weight: 400;
       color: var(--ink);
       max-width: 700px;
       margin-bottom: 1.4rem;
@@ -178,7 +178,7 @@
 
     .hero h1 em {
       font-style: italic;
-      font-weight: 300;
+      font-weight: 400;
       color: var(--accent);
     }
 
@@ -244,9 +244,9 @@
     }
 
     .card h2 {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-family: var(--display);
+      font-size: 1.8rem;
+      font-weight: 400;
       letter-spacing: -.02em;
       margin-bottom: 1rem;
       color: var(--ink);
@@ -353,9 +353,9 @@
     }
 
     .cta-card h2 {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-family: var(--display);
+      font-size: 1.8rem;
+      font-weight: 400;
       letter-spacing: -.02em;
       margin-bottom: .8rem;
       color: var(--ink);
@@ -405,7 +405,7 @@
       <a href="#what">what happens</a>
       <a href="#offers">offers</a>
       <a href="#enquire" class="pill">enquire</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌙</button>
+      <button class="theme-toggle" id="themeToggle" aria-label="toggle colour mode">🌗</button>
     </nav>
   </header>
 
@@ -432,42 +432,34 @@
       <p class="hero-note">limited availability · the direction finds itself</p>
     </section>
 
-    <!-- ─── field note ─── -->
-    <section>
-      <div class="field-note">
-        <p>You already know the direction.</p>
-        <p><em>You just haven't had the witness yet.</em></p>
-        <p>That's what this is.</p>
-      </div>
-    </section>
-
     <!-- ─── about ─── -->
     <section id="about">
       <p class="section-label">the mentor</p>
       <div class="card">
-        <h2>Deiadora listens at a level most people have never architected before: emotion or energy in motion.</h2>
+        <h2>She built the system because no existing one was precise enough.</h2>
         <p>
-          As a natural technologist and researcher who has spent
-          thirteen years studying the architecture of coherent human systems,
-          Deiadora brings an unusual depth of perception to mentorship.
-          She hears not just what is said but what is underneath it —
-          the pattern beneath the presenting problem,
-          the direction beneath the friction.
+          For five years, Deiadora worked with Human Design and Gene Keys —
+          listening to language patterns, mapping emotional architecture,
+          reflecting back the keys she heard in what people said. When she
+          proposed a collaboration — and told Richard Rudd it wasn't 64 keys
+          but 88 — the answer was no. So she built her own. Nine years later —
+          a 1-to-9 numerological cycle she didn't plan — the framework was
+          complete: 264 keys, 88 × 3, each arc representing a different aspect
+          of the paradox of human emotion. A spectrum, not a duality.
         </p>
         <p>
-          Her work is grounded in <em>Quantum Currency: Field Research on Human Coherence</em>
-          and the multiscalar framework she has been teaching to professionals,
-          founders, and teams across the tech industry and beyond.
-          She works with her 264 quantum keys — emotional arcs
-          as a tool for self-knowledge — by listening to language patterns.
-          These then map to the individual's unique architecture
-          at the personal, relational, and collective level.
+          What she does in a session is what the model does: she listens to
+          your language, identifies the four keys you most reflect, and gives
+          them back to you as a map of your own architecture. The same
+          framework is the foundation of <a href="https://quantummagic.ai" style="color:var(--accent);text-decoration:none;">quantummagic.ai</a> —
+          the AI instantiation of thirteen years of field research into the
+          architecture of coherent human systems.
         </p>
         <p>
           This is not life coaching. It is something more precise:
-          a space in which you already know something is off can finally name it —
-          and find the direction your own internal coherence
-          system allows energy to move, make decisions, and find its direction.
+          a space in which what you already know is off can finally be named —
+          and the direction your own internal coherence allows energy to move,
+          make decisions, and find its ground becomes legible.
         </p>
       </div>
     </section>
@@ -559,32 +551,29 @@
 
     const toggle  = document.getElementById("themeToggle");
     const root    = document.documentElement;
-    const STORE   = "qc-theme"; // shared key across all ecosystem sites
+    const STORE   = "qc-theme";
 
-    // Detect system preference
     const sysDark = window.matchMedia("(prefers-color-scheme: dark)");
 
     function resolveTheme() {
       const saved = localStorage.getItem(STORE);
-      if (saved) return saved;                     // explicit user override
-      return sysDark.matches ? "dark" : "light";   // follow system
+      if (saved) return saved;
+      return sysDark.matches ? "dark" : "light";
     }
 
     function applyTheme(theme) {
       root.setAttribute("data-theme", theme);
-      toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+      const isSystem = !localStorage.getItem(STORE);
+      toggle.textContent = isSystem ? "🌗" : (theme === "dark" ? "🌙" : "☀️");
       toggle.setAttribute("aria-label", theme === "dark" ? "switch to light mode" : "switch to dark mode");
     }
 
-    // Initial paint
     applyTheme(resolveTheme());
 
-    // Toggle click — cycle: override opposite → clear override (return to system)
     toggle.addEventListener("click", () => {
       const current = root.getAttribute("data-theme");
       const sysTheme = sysDark.matches ? "dark" : "light";
       const next = current === "dark" ? "light" : "dark";
-
       if (next === sysTheme) {
         localStorage.removeItem(STORE);
       } else {
@@ -593,7 +582,6 @@
       applyTheme(next);
     });
 
-    // Follow OS schedule changes if no manual override is set
     sysDark.addEventListener("change", () => {
       if (!localStorage.getItem(STORE)) {
         applyTheme(sysDark.matches ? "dark" : "light");
