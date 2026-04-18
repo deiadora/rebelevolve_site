@@ -221,6 +221,8 @@
     .btn.primary:hover { background: var(--accent-lt); border-color: var(--accent-lt); }
     .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
     .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn.gold { background: transparent; color: var(--gold); border-color: var(--gold); }
+    .btn.gold:hover { opacity: .75; }
 
     /* ─── sections ─── */
     section { margin-top: 5rem; }
@@ -534,8 +536,15 @@
           For 1:1, small group, or ongoing engagement enquiries —
           email directly. Every engagement begins with a conversation
           to establish whether the work is the right fit.
+          Sessions are available by direct enquiry, with fiat and $Minima access coming soon.
         </p>
-        <a class="btn primary" href="mailto:hello@rebelevolve.com?subject=mentorship enquiry · rebelevolve.com">email deiadora →</a>
+        <div style="display:flex; gap:.8rem; flex-wrap:wrap; align-items:center;">
+          <a class="btn primary" href="mailto:hello@rebelevolve.com?subject=mentorship enquiry · rebelevolve.com">email deiadora →</a>
+          <!-- future anchor: replace href with fiat booking/payment link when calendar solution is ready -->
+          <a class="btn ghost" href="mailto:hello@rebelevolve.com?subject=mentorship enquiry · fiat · rebelevolve.com">book · fiat →</a>
+          <!-- future anchor: replace href with Minima minidapp/Store link when ready -->
+          <a class="btn gold" href="mailto:hello@rebelevolve.com?subject=mentorship enquiry · minima · rebelevolve.com">book · $Minima →</a>
+        </div>
       </div>
     </section>
 
